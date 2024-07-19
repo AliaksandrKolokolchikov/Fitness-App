@@ -1,10 +1,19 @@
+import './index.css';
+
+import {Navbar} from '@/components/Navbar/Navbar.tsx'
+import {useState} from "react";
 
 function App() {
+    const [selectedPage, setSelectedPage] = useState<string>('home');
 
   return (
-    <>
 
-    </>
+      <div className='bg-gray-20'>
+        <Navbar
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+        />
+      </div>
   )
 }
 
