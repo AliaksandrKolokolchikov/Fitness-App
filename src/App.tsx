@@ -2,9 +2,12 @@ import './index.css';
 
 import {Navbar} from '@/components/Navbar/Navbar.tsx'
 import {useState} from "react";
+import {SelectedPage} from "@/shared/types.ts";
+
+
 
 function App() {
-    const [selectedPage, setSelectedPage] = useState<string>('home');
+    const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
 
   return (
 
