@@ -3,6 +3,7 @@ import './index.css';
 import {Navbar} from '@/components/Navbar/Navbar.tsx'
 import {useEffect, useState} from "react";
 import {SelectedPage} from "@/shared/types.ts";
+import {Home} from "@/components/home";
 
 
 
@@ -23,13 +24,13 @@ function App() {
     }, []);
 
   return (
-
       <div className='bg-gray-20'>
         <Navbar
             isTopOfPage={isTopOfPage}
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
         />
+          <Home  setSelectedPage={setSelectedPage} />
       </div>
   )
 }
